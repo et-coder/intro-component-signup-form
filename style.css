@@ -11,10 +11,11 @@ body {
     background: url('images/bg-intro-mobile.png');
     background-color: hsl(0, 100%, 74%);
     color: #fff;
+    padding: 5em 1em;
 }
 
 .container {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -25,18 +26,18 @@ body {
 }
 
 .hero {
-    padding: 2.5em 0;
     margin-top: 1em;
     text-align: center;
 }
 
 h1 {
+    line-height: 1.2;
     font-size: 1.8rem;
     margin: 1em 0;
 }
 
 .try-it {
-    padding: 15px 50px;
+    padding: 15px 40px;
     background-color: hsl(248, 32%, 49%);
     text-align: center;
     border-radius: 10px;
@@ -99,4 +100,49 @@ input:focus {
 .disclamer span {
     font-weight: bold;
     color: hsl(0, 100%, 74%);
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 500px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+
+    body {
+        margin: auto 3.5rem;
+        background-image: url('images/bg-intro-desktop.png');
+    }
+
+    .container {
+        flex-direction: row;
+        max-width: 1100px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero {
+        text-align: left;
+        flex: 50%;
+        max-width: 45%;
+    }
+
+    h1 {
+        font-size: 2.9rem;
+        margin: .5em 0;
+    }
+
+
+    .free-trial {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .attribution {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 100%);
+    }
 }
