@@ -102,6 +102,29 @@ input:focus {
     color: hsl(0, 100%, 74%);
 }
 
+.input-box {
+    position: relative;
+}
+
+.error-icon {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.error-msg {
+    text-align: right;
+    font-size: .7rem;
+    font-style: italic;
+    color: hsl(0, 100%, 74%);
+    margin-bottom: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
     .container {
         max-width: 500px;
