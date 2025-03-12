@@ -15,12 +15,14 @@ const setError = (element, message) => {
     element.nextElementSibling.classList.remove('hidden');
     element.parentElement.nextElementSibling.classList.remove('hidden');
     element.parentElement.nextElementSibling.textContent = message;
+    element.style.borderColor = 'hsl(0, 100%, 74%)';
     pass = false
 }
 
 const setSuccess = (element) => {
     element.nextElementSibling.classList.add('hidden');
     element.parentElement.nextElementSibling.classList.add('hidden');
+    element.style.borderColor = 'hsl(246, 25%, 77%)';
     pass = true;
 }
 
@@ -32,7 +34,8 @@ function clearFields() {
 
 }
 
-document.querySelector('.button').addEventListener('click', (e) => {
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
     if (firstName.value === '') {
         setError(firstName, 'First Name cannot be empty');
 
