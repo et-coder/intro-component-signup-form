@@ -44,10 +44,30 @@
         <div class="info card">
 
           <form>
-            <input type="text" id="first-name" placeholder="First Name">
-            <input type="text" id="last-name" placeholder="Last Name">
-            <input type="email" id="email" placeholder="Email Address">
-            <input type="password" id="password" placeholder="Password">
+
+            <div class="input-box">
+              <input type="text" id="first-name" placeholder="First Name">
+              <img class="error-icon hidden" src="images/icon-error.svg" alt="">
+            </div>
+            <p class="error-msg hidden"></p>
+
+            <div class="input-box">
+              <input type="text" id="last-name" placeholder="Last Name">
+              <img class="error-icon hidden" src="images/icon-error.svg" alt="">
+            </div>
+            <p class="error-msg hidden"></p>
+
+            <div class="input-box">
+              <input type="email" id="email" placeholder="Email Address">
+              <img class="error-icon hidden" src="images/icon-error.svg" alt="">
+            </div>
+            <p class="error-msg hidden"></p>
+
+            <div class="input-box">
+              <input type="password" id="password" placeholder="Password">
+              <img class="error-icon hidden" src="images/icon-error.svg" alt="">
+            </div>
+            <p class="error-msg hidden">Password cannot be empty</p>
           </form>
 
           <div class="button">Claim your free trial</div>
